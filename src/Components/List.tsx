@@ -17,16 +17,16 @@ export const List: React.FC<ListProps> = ({ listing }) => {
   return (
     <div>
       {listing && (
-        <div className='flex justify-center  items-center flex-col h-screen'>
-         <h1 className='text-center text-3xl font-bold'> {listing[0].category}</h1>
-          <div className='mx-auto'>
+        <div className='flex  flex-col h-[100%] justify-between'>
+         {/* <h1 className=' text-3xl font-bold'> {listing[0].category}</h1> */}
+          
           <ul>
             {listing.map((quotes, index) => (
              <Cards key ={index} quotes = {quotes}/>
             ))}
           </ul>
             </div>
-        </div>
+        
       )}
     </div>
   );

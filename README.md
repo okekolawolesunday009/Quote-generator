@@ -16,7 +16,7 @@
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
+    <a href="https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8">
       Challenge
     </a>
   </h3>
@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/okekolawolesunday009/todoApp/blob/main/src/Assets/Todo%20.png)
+![screenshot](https://github.com/okekolawolesunday009/Quote-generator/blob/main/src/Assets/qgen.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -68,7 +68,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/okekolawolesunday009/todoApp
+$ git clone https://github.com/okekolawolesunday009/Quote-generator
 
 
 ## Acknowledgements
@@ -81,6 +81,6 @@ $ git clone https://github.com/okekolawolesunday009/todoApp
 
 ## Contact
 
-- Website [Okekolawolesunday.netlify.app](https://Okekolawolesunday.netlify.app)
-- GitHub [@okekolawolesunday009](https://github.com/okekolawolesunday009/todoApp)
+- Website [Okekolawolesunday.netlify.app](https://quote-generator007.netlify.app/)
+- GitHub [@okekolawolesunday009](https://github.com/okekolawolesunday009/Quote-generator)
 - Twitter [@OkekolawoleSun3](//twitter.com/OkekolawoleSun3)

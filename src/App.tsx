@@ -45,10 +45,12 @@ function App() {
   useEffect(() => {
     const fetchQuoteData = async () => {
       try {
+        
         const response = await fetchQuotesList(categorys);
         if (response) {
           setListing(response);
           console.log(response)
+
         }
       } catch (error) {
         console.log(error);
