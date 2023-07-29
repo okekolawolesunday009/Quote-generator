@@ -15,7 +15,7 @@ type FullQuoteType = {
   categorys?: string
 
 };
-
+console.log("fff")
 
 
 function App() {
@@ -23,42 +23,56 @@ function App() {
   const [listing, setListing] = useState<FullQuoteType[]>([]);
   const [categorys, setCategorys] = useState<string | undefined>(undefined);
 
-  useEffect(() => {
-    const fetchQuoteData = async () => {
-      try {
-        const fetchedQuote = await fetchQuotes();
-        setFullQuote(fetchedQuote);
-        setCategorys(fetchedQuote?.category);
-      
+
+    // const fetchQuoteDataQuote = async () => {
+    //   try {
+    //     const fetchedQuote = await fetchQuotes();
+    //     setFullQuote(fetchedQuote);
+    //     setCategorys(fetchedQuote?.category);
+    //     console.log("first", fetchedQuote);
 
        
-      } catch (error) {
-        console.log(error);
-      }
-    };
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // };
 
-    fetchQuoteData();
+    // fetchQuoteData();
    
-  }, []);
-
-
-  useEffect(() => {
-    const fetchQuoteData = async () => {
-      try {
+    // const fetchQuoteData = async () => {
+    //   try {
         
-        const response = await fetchQuotesList(categorys);
-        if (response) {
-          setListing(response);
-          console.log(response)
+    //     const response = await fetchQuotesList(categorys);
+    //     if (response) {
+    //       setListing(response);
+    //       console.log("second", response)
 
+    //     }
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // };
+
+    useEffect(() => {
+      async function fetchmyAPI() {
+        try {
+          const fetchedQuote = await fetchQuotes();
+          setFullQuote(fetchedQuote);
+          setCategorys(fetchedQuote?.category);
+    
+          // Fetch the quotes list using a separate async function
+          const response = await fetchQuotesList(fetchedQuote?.category);
+          if (response) {
+            setListing(response);
+            console.log("second", response);
+          }
+        } catch (error) {
+          console.log(error);
         }
-      } catch (error) {
-        console.log(error);
       }
-    };
-
-    fetchQuoteData();
-  }, [])
+      fetchmyAPI().catch(console.error);
+    }, []);
+    
   const handleClick = () => {
    window.location.reload()
 
@@ -82,7 +96,7 @@ function App() {
         </header>
       <Routes>
         <Route path="/" element= {fullQuote != null  && (
-         <Home fullQuote = {fullQuote}  />
+         <Home fullQuote = {fullQuote}/>
       )} />
         <Route path="/List" element= {listing != null  && (
          <List listing = {listing}   />
