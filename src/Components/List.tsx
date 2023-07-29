@@ -18,7 +18,7 @@ export const List: React.FC<ListProps> = ({ listing }) => {
     <div>
       {listing && (
         <div className='flex  flex-col h-[100%] justify-between'>
-         <h1 className=' text-3xl font-bold mt-4'> {listing[0].category}</h1>
+         <h1 className=' text-3xl font-bold mt-4'> {listing[0].category.toUpperCase()}</h1>
           
           <ul>
             {listing.map((quotes, index) => (
