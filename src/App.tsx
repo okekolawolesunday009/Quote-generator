@@ -24,34 +24,6 @@ function App() {
   const [categorys, setCategorys] = useState<string | undefined>(undefined);
 
 
-    // const fetchQuoteDataQuote = async () => {
-    //   try {
-    //     const fetchedQuote = await fetchQuotes();
-    //     setFullQuote(fetchedQuote);
-    //     setCategorys(fetchedQuote?.category);
-    //     console.log("first", fetchedQuote);
-
-       
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
-
-    // fetchQuoteData();
-   
-    // const fetchQuoteData = async () => {
-    //   try {
-        
-    //     const response = await fetchQuotesList(categorys);
-    //     if (response) {
-    //       setListing(response);
-    //       console.log("second", response)
-
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
 
     useEffect(() => {
       async function fetchmyAPI() {
@@ -79,11 +51,6 @@ function App() {
     
 
   }
-
-//   const localStorage = window.localStorage;
-
-// localStorage.setItem('category', 'categorys');
-
 
 
   return (
